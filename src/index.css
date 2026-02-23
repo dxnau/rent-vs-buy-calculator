@@ -1,0 +1,108 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ── Backgrounds ── */
+  --navy-950: #000000;
+  --surface-1: #1c1c1e;
+  --surface-2: #2c2c2e;
+  --surface-3: #3a3a3c;
+
+  /* ── Off-white (primary — buy/interactive) ── */
+  --navy-400: #e5e5ea;
+  --blue-600: #aeaeb2;
+  --blue-500: #e5e5ea;
+  --blue-400: #f0f0f5;
+  --blue-300: #f5f5f7;
+
+  /* ── Apple Orange (buy accent) ── */
+  --orange-500: #ff9f0a;
+  --orange-400: #ffb340;
+
+  /* ── Apple Teal (secondary — rent) ── */
+  --amber-500: #5ac8fa;
+  --amber-400: #70d4ff;
+  --amber-300: #99e4ff;
+  --amber-100: #d6f4ff;
+
+  /* ── Apple Green ── */
+  --green-500: #30d158;
+  --green-400: #4cd964;
+  --green-100: #d4f8e0;
+
+  /* ── Apple Red ── */
+  --red-500: #ff453a;
+  --red-400: #ff6961;
+  --red-100: #ffd5d3;
+
+  /* ── Text ── */
+  --text-primary: #f5f5f7;
+  --text-secondary: #98989d;
+  --text-muted: #636366;
+
+  /* ── Borders ── */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.14);
+
+  /* ── Typography — pure system stack ── */
+  --font-display: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    -apple-system, 'SF Pro Text',    'Helvetica Neue', Arial, sans-serif;
+
+  /* ── Radii ── */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* ── Shadows ── */
+  --shadow-glow: none;
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 4px 24px rgba(0, 0, 0, 0.6);
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: #000000;
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--surface-3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #48484a; }
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up { animation: fadeInUp 0.5s ease forwards; }
+.animate-fade    { animation: fadeIn  0.4s ease forwards; }
+
+/* ── Number Input Focus ── */
+.slider-num-input:focus {
+  border-color: var(--blue-500) !important;
+  box-shadow: 0 0 0 3px rgba(229, 229, 234, 0.15) !important;
+}
+
+.slider-num-input::selection {
+  background: rgba(229, 229, 234, 0.2);
+}
