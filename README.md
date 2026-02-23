@@ -26,9 +26,11 @@ A calculator that tells you whether renting or buying makes more financial sense
 
 ### Full dashboard
 
-![Dashboard showing verdict, cost cards, and input panel](docs/screenshots/hero.png)
+![Dashboard showing verdict, cost cards, and input panel](docs/screenshots/hero2.png)
 
 > Orange = buying · Teal = renting · Green = the recommended option
+
+![Graphs and more detail](docs/screenshots/graph.png)
 
 ---
 
